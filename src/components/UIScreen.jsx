@@ -1,27 +1,26 @@
 import React from "react";
+import "./UIScreen.css";
 
 const UIScreen = ({ onPlayRequest, onSettingsRequest, onQuitRequest }) => {
-	return (
-		<div className="container">
-			<div className="center-block">
-				<div className="text-center logo-title  mt-5">
-					<div className="logo"></div>
-					<h2>Chess</h2>
-				</div>
-				<div className="column text-center mt-5">
-					<div>
-						<button className="btn px-5 mb-2 btn-success" onClick={onPlayRequest}>Play</button>
-					</div>
-					<div>
-						<button className="btn px-5 mb-2 btn-primary" onClick={onSettingsRequest}>Settings</button>
-					</div>
-					<div>
-						<button className="btn px-5 mb-2 btn-danger" onClick={onQuitRequest}>Quit</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="ui-screen">
+      <div className="logo-title">
+        <div className="logo">LOGO HERE</div>
+        <h2>Chess</h2>
+      </div>
+      <div className="controls">
+        <button className="primary" onClick={onPlayRequest}>
+          Play
+        </button>
+        <button className="secondary" onClick={onSettingsRequest}>
+          Settings
+        </button>
+        <button className="danger" onClick={onQuitRequest}>
+          Quit
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default UIScreen;

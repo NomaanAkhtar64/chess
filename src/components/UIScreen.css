@@ -1,0 +1,23 @@
+.ui-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo-title {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-title h2 {
+  margin-left: 20px;
+}
+
+.controls {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
