@@ -17,9 +17,17 @@
 .b2 {
   --active-size: 18px;
 }
+/* HEADINGS
+--------*/
+h1 {
+  font-size: 40px;
+}
 h2 {
   font-size: 24px;
 }
+
+/* BUTTONS 
+-------*/
 button {
   --blank-text: #000;
   --fill-text: #dedede;
@@ -36,7 +44,7 @@ button:active {
 }
 button.outline {
   color: var(--blank-text);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
   border-width: calc(var(--active-size) / 12);
   border-style: solid;
   border-color: var(--color);
@@ -46,33 +54,16 @@ button.outline:active {
   color: var(--fill-text);
   border-color: var(--active-color);
 }
-
-.bg-blue {
-  background: #0a82d1;
-}
-.bg-darkblue {
-  background: #06629e;
-}
-.bg-lightblue {
-  background: #24a8bf;
-}
-.bg-darkgrey {
-  background: #333;
-}
-.bg-lightblack {
-  background: #222;
-}
 button.primary {
   --color: #0a82d1;
   --active-color: #06629e;
 }
-
 button.secondary {
   --color: #24a8bf;
   --active-color: #32c9e3;
 }
-
 button.danger {
   --color: #d4642c;
   --active-color: #ad5428;
 }
+/*  */
