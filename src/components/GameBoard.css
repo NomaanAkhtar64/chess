@@ -22,7 +22,7 @@
   --square-size: 64px;
 }
 .square.black {
-  background: #000;
+  background: #333;
 }
 .square.white {
   background: #eee;
