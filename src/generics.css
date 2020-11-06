@@ -67,3 +67,8 @@ button.danger {
   --active-color: #ad5428;
 }
 /*  */
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
