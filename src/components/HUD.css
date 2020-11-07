@@ -1,0 +1,14 @@
+.hud {
+  width: 100%;
+  height: 6vh;
+  max-width: 500px;
+}
+
+.hud.opponent {
+  background: #b81a1a;
+  margin-left: auto;
+}
+
+.hud.user {
+  background: #4fb9c2;
+}

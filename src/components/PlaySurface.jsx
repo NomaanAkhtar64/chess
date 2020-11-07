@@ -4,11 +4,16 @@ import GameBoard from "./GameBoard";
 
 const PlaySurface = () => {
   return (
-    <div className="container" style={{ width: "100vw", height: "100vh", maxHeight: "100vh" }}>
-      <HUD />
+    <div style={{
+      background: "#333",
+      width: "100vw",
+      height: "100vh",
+      maxHeight: "100vh",
+    }}>
+      < HUD isUser={false} />
       <GameBoard />
-      <HUD />
-    </div>
+      <HUD isUser={true} />
+    </div >
   );
 };
 

@@ -46,10 +46,10 @@ const GameBoard = () => {
     const [isUserMove, setIsUserMove] = useState(true);
     return (
         <>
-            <div className="turn-counter">
-                {`${isUserMove ? "USER" : "OPPONENT"}  TURN ${Math.ceil(moveCount / 2)}`}
-            </div>
             <div className="game-board">
+                <div className="turn-counter">
+                    {`${isUserMove ? "USER" : "OPPONENT"}  TURN ${Math.ceil(moveCount / 2)}`}
+                </div>
                 <div className="squares">
                     <div className="row white">
                         <div className="square"></div>
@@ -171,19 +171,19 @@ const GameBoard = () => {
                         <div className="square"></div>
                         <div className="square"></div>
                     </div>
+                    {opponentDeadPieces.map((o, i) => (
+                        <Piece isUserMove={false} posY={i < 8 ? 11 : 10} posX={i < 8 ? i : i - 8} variant="white" type={o.type} key={i} />
+                    ))}
+                    {opponentPieces.map((o, i) => (
+                        <Piece isUserMove={isUserMove} posY={9 - o.posY} posX={7 - o.posX} variant="white" type={o.type} key={i} />
+                    ))}
+                    {userPieces.map((p, i) => (
+                        <Piece isUserMove={isUserMove} variant="black" posX={p.posX} posY={p.posY + 2} type={p.type} key={i} />
+                    ))}
+                    {userDeadPieces.map((o, i) => (
+                        <Piece isUserMove={false} posY={i < 8 ? 1 : 0} posX={i < 8 ? i : i - 8} variant="black" type={o.type} key={i} />
+                    ))}
                 </div>
-                {opponentDeadPieces.map((o, i) => (
-                    <Piece isUserMove={false} posY={i < 8 ? 11 : 10} posX={i < 8 ? i : i - 8} variant="white" type={o.type} key={i} />
-                ))}
-                {opponentPieces.map((o, i) => (
-                    <Piece isUserMove={isUserMove} posY={9 - o.posY} posX={7 - o.posX} variant="white" type={o.type} key={i} />
-                ))}
-                {userPieces.map((p, i) => (
-                    <Piece isUserMove={isUserMove} variant="black" posX={p.posX} posY={p.posY + 2} type={p.type} key={i} />
-                ))}
-                {userDeadPieces.map((o, i) => (
-                    <Piece isUserMove={false} posY={i < 8 ? 1 : 0} posX={i < 8 ? i : i - 8} variant="black" type={o.type} key={i} />
-                ))}
             </div>
         </>
     );

@@ -1,8 +1,9 @@
 import React from "react";
+import "./HUD.css";
 
-const HUD = ({ }) => {
+const HUD = ({ isUser }) => {
   return (
-    <div style={{ width: "fit-content" }} className="hud">
+    <div className={isUser ? "hud user" : "hud opponent"}>
       HUD
     </div>
   );

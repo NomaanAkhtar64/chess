@@ -1,8 +1,8 @@
 .square {
   width: 12.5vw;
   height: 12.5vw;
-  max-width: 8vh;
-  max-height: 8vh;
+  max-width: 7vh;
+  max-height: 7vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,17 +10,25 @@
 .game-board {
   margin-left: auto;
   margin-right: auto;
-  position: relative;
   width: fit-content;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .squares {
+  position: relative;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 96vh;
+  /* margin: auto; */
+  max-height: 84vh;
 }
 .squares > .row {
   width: fit-content;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: 0px;
 }
 .square.black {
   background: #333;
@@ -29,11 +37,12 @@
   background: #eee;
 }
 .row.white {
-  background: #e2e2e2;
+  background: #3e3e3e;
 }
 .row.black {
-  background: #555;
+  background: #e2e2e2;
 }
+
 .piece {
   position: absolute;
   display: flex;
@@ -41,17 +50,21 @@
   align-items: center;
   height: 12.5vw;
   width: 12.5vw;
-  max-width: 8vh;
-  max-height: 8vh;
+  max-width: 7vh;
+  max-height: 7vh;
 }
 
 .turn-counter {
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   background: #555;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 500px;
+  width: 100vw;
   color: #fff;
+  height: 4vh;
+  line-height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
