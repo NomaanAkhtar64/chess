@@ -81,6 +81,7 @@ const getIcon = (type, isBlack) => {
 // }
 
 const Piece = ({ type, posX, posY, onGetAllowed, isUserMove, variant }) => {
+    console.log({ type, posX, posY, isUserMove, variant })
     const [isFocused, setIsFocused] = useState(false);
     const [isDragged, setIsDragged] = useState(false);
     const dragStart = () => {
@@ -102,7 +103,7 @@ const Piece = ({ type, posX, posY, onGetAllowed, isUserMove, variant }) => {
                     ))}
                 </>
             } */}
-            <div onMouseDown={dragStart} onMouseMove={dragMove} onMouseUp={dragEnd} className="piece" style={{ left: posX * 12.5 + '%', bottom: posY * 12.5 + '%' }}>
+            <div onMouseDown={dragStart} onMouseMove={dragMove} onMouseUp={dragEnd} className="piece" style={{ left: posX * 12.5 + '%', bottom: posY * 8.333 + '%' }}>
                 {getIcon(type, variant === "black")}
             </div>
         </>

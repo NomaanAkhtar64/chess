@@ -1,10 +1,8 @@
 .square {
   width: 12.5vw;
   height: 12.5vw;
-  /* max-width: 12.5%;
-  max-height: 12.5%; */
-  max-width: 10vh;
-  max-height: 10vh;
+  max-width: 8vh;
+  max-height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +17,7 @@
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  max-height: 80vh;
+  max-height: 96vh;
 }
 .squares > .row {
   width: fit-content;
@@ -30,14 +28,30 @@
 .square.white {
   background: #eee;
 }
-
+.row.white {
+  background: #e2e2e2;
+}
+.row.black {
+  background: #555;
+}
 .piece {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12.5vw;
   height: 12.5vw;
-  max-width: 10vh;
-  max-height: 10vh;
-  position: absolute;
+  width: 12.5vw;
+  max-width: 8vh;
+  max-height: 8vh;
+}
+
+.turn-counter {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  background: #555;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  color: #fff;
 }

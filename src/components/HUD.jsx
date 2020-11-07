@@ -1,11 +1,8 @@
 import React from "react";
 
-const HUD = ({ className }) => {
+const HUD = ({ }) => {
   return (
-    <div
-      style={{ width: "fit-content" }}
-      className={className ? `hud ${className}` : "hud"}
-    >
+    <div style={{ width: "fit-content" }} className="hud">
       HUD
     </div>
   );
